@@ -28,14 +28,12 @@ class Organisers(commands.Cog):
         embed.add_field(name="Members (total)", value=counts.everyone, inline=False)
         embed.add_field(name="Unregistered", value=counts.not_registered, inline=False)
         embed.add_field(name="Participants", value=counts.participants, inline=False)
-        embed.add_field(name="Onsite Participants", value=counts.participants_onsite, inline=False)
         embed.add_field(name="Remote Participants", value=counts.participants_remote, inline=False)
         embed.add_field(name="Sponsors", value=counts.sponsors, inline=False)
         embed.add_field(name="Speakers", value=counts.speakers, inline=False)
         embed.add_field(name="Volunteers", value=counts.volunteers, inline=False)
-        embed.add_field(name="Onsite Volunteers", value=counts.volunteers_onsite, inline=False)
-        embed.add_field(name="Remote Volunteers", value=counts.volunteers_remote, inline=False)
         embed.add_field(name="Organisers", value=counts.organisers, inline=False)
+        embed.add_field(name="Moderators", value=counts.moderators, inline=False)
         await ctx.send(embed=embed)
 
     def _get_counts(self, guild: discord.Guild) -> "_RoleCount":
@@ -84,10 +82,8 @@ class _RoleCount:
     not_registered: int
     organisers: int
     volunteers: int
-    volunteers_onsite: int
     sponsors: int
     speakers: int
-    volunteers_remote: int
     participants: int
-    participants_onsite: int
     participants_remote: int
+    moderators: int

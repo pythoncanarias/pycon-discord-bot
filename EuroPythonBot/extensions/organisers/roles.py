@@ -6,12 +6,10 @@ import attrs
 class Roles:
     """Role mapping for the organisers extension."""
 
+    moderators: int
     organisers: int
     volunteers: int
-    volunteers_onsite: int
-    volunteers_remote: int
-    sponsors: int
     speakers: int
+    sponsors: int
     participants: int
-    participants_onsite: int
     participants_remote: int

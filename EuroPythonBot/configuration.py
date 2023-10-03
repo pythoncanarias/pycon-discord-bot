@@ -42,9 +42,8 @@ class Config(metaclass=Singleton):
             self.REG_HELP_CHANNEL_ID = int(config["registration"]["REG_HELP_CHANNEL_ID"])
             self.REG_LOG_CHANNEL_ID = int(config["registration"]["REG_LOG_CHANNEL_ID"])
 
-            # Pretix
-            self.PRETIX_BASE_URL = config["pretix"]["PRETIX_BASE_URL"]
-            self.TICKET_TO_ROLES_JSON = config["pretix"]["TICKET_TO_ROLES_JSON"]
+            # Eventbrite
+            self.TICKET_TO_ROLES_JSON = config["eventbrite"]["TICKET_TO_ROLES_JSON"]
 
             # Logging
             self.LOG_LEVEL = config.get("logging", {}).get("LOG_LEVEL", "INFO")
